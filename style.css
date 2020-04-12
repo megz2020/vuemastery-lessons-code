@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    color:#282828;
+    margin: 0px;
+}
+
+
+.nav-bar {
+    background: linear-gradient(-90deg, #84CF6A, #16c01e);
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.flex-parent {
+    display: flex;
+    height: 300px;
+    width: 90%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+
+}
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .navigation {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: space-around;
+    }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+    .navigation {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
+.flex-child {
+    margin: auto;  /* Magic! */}
+button {
+     display:inline-block;
+    font-weight: bolder;
+    font-family: 'Rock Salt';
+    border-radius: 12px;
+    padding: 14px 40px;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.3em 0.3em 0;
+     box-sizing: 10px;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:#FFFFFF;
+     text-align:center;
+    background: #0cc4a8;
+    transition: all .1s ease-out;
+}
+
+
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.disabledButton {
+    background-color: #d8d8d8;
+}
+.cart{
+    width: 70px;
+    height: 50px;
+    margin: auto;
+    flex-flow: row;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 50px;
+
+
+}
+img {
+    border: 1px solid #d8d8d8;
+    width: 70%;
+    height: 50%;
+    margin: 40px;
+    box-shadow: 0px .5px 1px #d8d8d8;
+}
+
+.product-image {
+    width: 80%;
+}
+
+.product-image,
+.product-info {
+    margin-top: 10px;
+    width: 50%;
+}
+
+.product-info {
+    display: flex;
+    flex-flow: column;
+}
+.review-tab {
+    display: flex;
+    justify-content:  stretch;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+#name{
+    width: 100%;
+    height: 25px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
